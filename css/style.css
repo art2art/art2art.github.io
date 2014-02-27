@@ -1,0 +1,267 @@
+@import url('normalize.css');
+
+body {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+	font-size: 16px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.container > a {
+	z-index: 10;
+	font-weight: light;
+    text-decoration: none;
+	text-align: center;
+	text-shadow: 1px 1px 1px #fff;
+	background: #d5d2c8;
+	color: #444;
+	position: fixed;
+	bottom: 0px;
+	width: 25%;
+	cursor: pointer;
+	height: 34px;
+	line-height: 34px;
+    box-sizing: border-box;
+}
+
+.container > .header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 90px;
+    margin: 0px;
+    z-index: 1000;
+    background: #d5d2c8;
+	color: #444;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+
+.header > #name,
+.header > #contacts {
+    display: inline-block;
+}
+
+#name {
+    margin: 1% 0 1% 40%;
+}
+
+#contacts {
+    clear: both;
+    margin: 0 5% 0 0;
+    float: right;
+}
+
+#name > span {
+    display: block;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+#name > span:first-child {
+    font-size: 2em;
+}
+
+#name > span:nth-child(2) {
+    position: relative;
+    font-size: 1em;
+}
+
+#contacts ul {
+    list-style-type: none;
+    font-size: 0.9em;
+}
+
+#contacts ul li a, a[href^=tel] {
+    color: #444;
+}
+
+#contacts a:hover {
+    text-shadow: 0 0 0 #fff;
+    color: #fff;
+}
+
+#link-welcome {
+	left: 0%;
+}
+
+#link-experience {
+	left: 25%;
+}
+
+#link-skills {
+	left: 50%;
+}
+
+#link-education {
+	left: 75%;
+}
+
+.container > a:hover {
+    border-top: 3px solid #9d9e94
+}
+
+.panel {
+    color: #444;
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: -150%;
+	min-width: 100%;
+	height: 95%;
+    z-index: 2;
+    padding: 0;
+	font-size: 16px;
+    font-weight: 300;
+
+    opacity: 0;
+    -webkit-transition: opacity .8s ease-in-out;
+    -moz-transition: opacity .8s ease-in-out;
+    -o-transition: opacity .8s ease-in-out;
+    -ms-transition: opacity .8s ease-in-out;
+    transition: opacity .8s ease-in-out;
+}
+
+.panel:target {
+    margin-top: 0%;
+    opacity: 1;
+    background-color: #fff;
+}
+
+.panel > section,
+.panel > p,
+.panel > h1, 
+.panel > h2 {
+	position: relative;
+    left: 25%;
+    width: 50%;
+}
+
+.panel h1,
+.panel h2 {
+    font-weight: 300;
+}
+ 
+.panel ul {
+    list-style-type: none;
+}
+
+.panel li:before {
+    position: relative;
+    content: '+';
+    left: -20px;
+    margin: 0 -5px;
+}
+
+#welcome h1 {
+    top: 25%;
+    color: #ce4502;
+    font-size: 2em;
+	text-align: center;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #bbb;
+}
+
+#welcome p {
+	top: 30%;
+	text-align: center;
+    text-shadow: 0 1px 0 #eee;
+	margin: 10px 0 0 0;
+}
+
+#experience section,
+#education section {
+	top: 20%;
+	padding: 0 0 1em 0;
+}
+
+#experience h1,
+#experience h2,
+#education h1,
+#education h2 {
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
+}
+
+#experience h2,
+#education h2 {
+    font-size: 1em;
+}
+
+#experience h1 a:hover,
+#experience ul li a:hover,
+#education h1 a:hover,
+#education ul li a:hover {
+    color: #ce4502;
+}
+
+#experience a,
+#education a {
+    color: #444;
+}
+
+#skills section,
+#education section {
+    top: 25%;
+}
+
+#skills p {
+    text-align: center;
+}
+
+#welcome:target ~ #link-welcome,
+#experience:target ~ #link-experience,
+#skills:target ~ #link-skills,
+#education:target ~ #link-education {
+    background: #9d9e94;
+    color: #fff;
+    text-weight: bold;
+    text-shadow: 0 0 0 #fff;
+}
+
+@media screen and (max-width: 520px) {
+    .panel {
+        top: 0;
+        font-size: 16px;
+    }
+
+    .container > .header {
+        height: 105px;
+    }
+
+    #name, #contacts, #contacts ul li {
+        width: 100%;
+        margin: 0;
+        float: center;
+        display: inline;
+    }
+    
+    #welcome p, .panel section {
+        width: 90%;
+        left: 5%;
+        margin-top: 5%;
+    }
+    
+    .container > a {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container > a {
+        font-size: 10px;
+    }
+}
