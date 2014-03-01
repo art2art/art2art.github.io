@@ -136,6 +136,7 @@ a {
 
 .panel:target {
     margin-top: 0%;
+    padding: 90px 0 0 0;
     opacity: 1;
     background-color: #fff;
 }
@@ -166,7 +167,7 @@ a {
 }
 
 #welcome h1 {
-    top: 25%;
+    top: 15%;
     color: #ce4502;
     font-size: 2em;
 	text-align: center;
@@ -175,14 +176,13 @@ a {
 }
 
 #welcome p {
-	top: 30%;
+	top: 20%;
 	text-align: center;
-	margin: 10px 0 0 0;
 }
 
 #experience section,
 #education section {
-	top: 20%;
+    top: 5%;
 	padding: 0 0 1em 0;
 }
 
@@ -214,7 +214,7 @@ a {
 
 #skills section,
 #education section {
-    top: 25%;
+    top: 15%;
 }
 
 #skills p {
@@ -243,7 +243,7 @@ a {
 
     #name, #contacts, #contacts ul li {
         width: 100%;
-        margin: 0;
+        margin: 0 auto;
         float: center;
         display: inline;
     }
@@ -251,7 +251,6 @@ a {
     #welcome p, .panel section {
         width: 90%;
         left: 5%;
-        margin-top: 5%;
     }
     
     .container > a {
@@ -261,6 +260,10 @@ a {
 
 @media screen and (max-width: 360px) {
     .container > a {
+        font-size: 10px;
+    }
+
+    .panel {
         font-size: 10px;
     }
 }
