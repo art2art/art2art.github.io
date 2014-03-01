@@ -231,7 +231,7 @@ a {
     text-shadow: 0 0 0 #fff;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 768px) {
     .panel {
         top: 0;
         font-size: 16px;
