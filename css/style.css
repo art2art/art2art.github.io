@@ -214,11 +214,11 @@ a {
 
 #skills section,
 #education section {
-    top: 15%;
+    top: 10%;
 }
 
 #skills p {
-    text-align: center;
+    text-align: left;
 }
 
 #welcome:target ~ #link-welcome,
